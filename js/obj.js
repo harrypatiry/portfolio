@@ -14,7 +14,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 const scene = new THREE.Scene();
 const textureLoader = new THREE.TextureLoader();
 const rockDis = textureLoader.load('assets/dis.jpg');
-const geometry = new THREE.PlaneGeometry(30, 50, 200, 200);
+const geometry = new THREE.PlaneGeometry(30, 30, 100, 100);
 const material = new THREE.MeshStandardMaterial({
   color: 0xffffff,
   displacementMap: rockDis,
@@ -24,7 +24,7 @@ const plane = new THREE.Mesh(geometry, material);
 plane.rotation.y = 0;
 plane.rotation.x = -11;
 plane.rotation.z = 90;
-plane.position.y = 5;
+plane.position.y = 6;
 plane.position.x = 0;
 plane.position.z = 0;
 scene.add(plane);
@@ -56,7 +56,7 @@ const camera = new THREE.PerspectiveCamera(
   100
   );
   camera.lookAt(0, 0, 0);
-  camera.position.z = 4;
+  camera.position.z = 5;
   camera.position.y = -3;
   scene.add(camera);
   
