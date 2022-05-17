@@ -13,64 +13,90 @@ html, body {
     position: absolute;
     top: 0;
     left: 0;
+    height: 100vh;
 }
 
 .navigation {
     position: relative;
-    padding: 1em;
+    padding: .5em;
     font-weight: 100;
     background-color: transparent;
 }
   
 .navigation p {
-font-size: 36px;
-letter-spacing: 5px;
+    font-size: 36px;
+    letter-spacing: 5px;
 }
 
 nav {
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-z-index: 4;
-position: fixed;
-top: 0;
-right: 0;
-left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 
 .nav-links {
-font-size: 18px;
-display: flex;
-list-style: none;
-align-items: center;
-width: 100%;
-letter-spacing: 3px;
+    font-size: 18px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    width: 100%;
+    letter-spacing: 3px;
 }
 
 .nav-links li {
-padding: .5rem;
-justify-content: space-between;
+    padding: .5rem;
+    justify-content: space-around;
 }
 
 .nav-links li:hover {
-color: rgb(107, 107, 107);
+    color: rgb(107, 107, 107);
 }
 
 .mobile-menu {
-padding-top: .5em;
-display: none;
+    padding-top: .5em;
+    display: none;
 }
 .bar {
-display: block;
-width: 25px;
-height: 3px;
-margin: 5px auto;
-background-color: #ffffff;
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #ffffff;
 }
 
 a, a:visited {
-text-decoration: none;
-color: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+.container {
+    height: 100%;
+}
+
+section {
+    width: 100%;
+}
+
+.title {
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    position: absolute;
+    display: grid;
+    place-items: center;
+    z-index: 3;
+    text-align: center;
+}
+
+.title p {
+    font-size: 42px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -84,7 +110,7 @@ color: inherit;
       top: 8vh;
       transform: translateX(100%);
       color: white;
-      background-color: rgba(0, 0, 0, 0.651);
+      background-color: rgba(0, 0, 0, 0.829);
     }  
     .nav-links li {
       text-align: center;
@@ -97,7 +123,7 @@ color: inherit;
       height: 100%;
     }  
     .nav-links li:hover {
-      background-color: rgba(255, 255, 255, 0.616);
+      background-color: rgba(255, 255, 255, 0.562);
       color: black;
     }  
     .mobile-menu {
@@ -111,22 +137,14 @@ color: inherit;
     } 
 }
 
-.title {
+
+
+section#projects {
     height: 100vh;
-    position: relative;
-    display: grid;
-    place-items: center;
     z-index: 3;
-    text-align: center;
 }
 
-.title p {
-    font-size: 42px;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-}
-
-.projects {
+section#about {
     height: 100vh;
     z-index: 3;
 }
