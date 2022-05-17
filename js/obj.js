@@ -2,14 +2,10 @@ import * as THREE from 'https://unpkg.com/three@0.126.1/build/three.module.js';
 // import { OrbitControls } from 'https://unpkg.com/three@0.126.1/examples/jsm/controls/OrbitControls.js';
 
 const canvas = document.querySelector("canvas.webgl");
-const sizes = {
-  width: window.innerWidth,
-  height: window.innerHeight,
-};
 const renderer = new THREE.WebGLRenderer({
   canvas: canvas,
 });
-renderer.setSize(sizes.width, sizes.height);
+renderer.setSize(window.innerHeight, window.innerWidth);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 const scene = new THREE.Scene();
 const textureLoader = new THREE.TextureLoader();
@@ -38,21 +34,20 @@ pointLight.position.y = -1;
 pointLight.position.z = 5;
 scene.add( pointLight );
 
-window.addEventListener("resize", () => {
-  sizes.width = window.innerWidth;
-  sizes.height = window.innerHeight;
-  
-  camera.aspect = sizes.width / sizes.height;
-  camera.updateProjectionMatrix();
-  
-  renderer.setSize(sizes.width, sizes.height);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-});
+window.addEventListener( 'resize', onWindowResize, false );
+    function onWindowResize(){
+
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+    
+        renderer.setSize( window.innerWidth, window.innerHeight );
+    
+    }
 
 
 const camera = new THREE.PerspectiveCamera(
   75,
-  sizes.width / sizes.height,
+  window.innerWidth / window.innerHeight,
   0.1,
   100
   );

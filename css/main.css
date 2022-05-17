@@ -13,10 +13,12 @@ html, body {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
+    max-height: 100vh;
+    min-height: 100vh;
 }
 
 .navigation {
+    clear: both;
     position: relative;
     padding: .5em;
     font-weight: 100;
@@ -32,7 +34,7 @@ html, body {
 nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     z-index: 4;
     position: fixed;
     top: 0;
@@ -51,7 +53,7 @@ nav {
 
 .nav-links li {
     padding: .5rem;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .nav-links li:hover {
@@ -79,15 +81,18 @@ a, a:visited {
 }
 
 section {
+    display: block;
     width: 100%;
+    min-height: 100vh;
+    position: relative;
 }
 
-.title {
+section#title {
+    height: 100%;
+    width: 100%;
     margin: 0 auto;
     left: 0;
     right: 0;
-    height: 100vh;
-    position: absolute;
     display: grid;
     place-items: center;
     z-index: 3;
@@ -95,7 +100,7 @@ section {
     color: #444444c9;
 }
 
-.title p {
+#title p {
     font-size: 42px;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -132,21 +137,17 @@ section {
       display: block;
       font-size: 22px;
       cursor: pointer;
-      z-index: 4;
+      z-index: 5;
     }  
     .nav-active {
       transform: translateX(0%);
     } 
 }
 
-
-
 section#projects {
-    height: 100vh;
-    z-index: 3;
+    height: 100%;
 }
 
 section#about {
-    height: 100vh;
-    z-index: 3;
+    height: 100%;
 }
