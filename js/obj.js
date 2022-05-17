@@ -14,26 +14,26 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 const scene = new THREE.Scene();
 const textureLoader = new THREE.TextureLoader();
 const rockDis = textureLoader.load('assets/dis.jpg');
-const geometry = new THREE.PlaneGeometry(30, 30, 100, 100);
+const geometry = new THREE.PlaneGeometry(50, 50, 100, 100);
 const material = new THREE.MeshStandardMaterial({
   color: 0xffffff,
   displacementMap: rockDis,
-  displacementScale: 9
+  displacementScale: 11
 });
 const plane = new THREE.Mesh(geometry, material);
 plane.rotation.y = 0;
 plane.rotation.x = -11;
 plane.rotation.z = 90;
-plane.position.y = 14;
+plane.position.y = 15;
 plane.position.x = 0;
 plane.position.z = 10;
-plane.scale.set(1,1,1)
+plane.scale.set(2,2,2)
 scene.add(plane);
 
 const count = geometry.attributes.position.count;
 // const ambLight = new THREE.AmbientLight(0xffffff, 1);
 const pointLight = new THREE.PointLight(0xffffff, 1);
-pointLight.position.x = 40;
+pointLight.position.x = 0;
 pointLight.position.y = -1;
 pointLight.position.z = 5;
 scene.add( pointLight );
@@ -57,9 +57,9 @@ const camera = new THREE.PerspectiveCamera(
   100
   );
   camera.lookAt(0, 0, 0);
-  camera.position.z = 5;
-  camera.position.y = 5;
-  camera.rotation.x = 7;
+  camera.position.z = 15;
+  camera.position.y = -4;
+  camera.rotation.x = 6.9;
   scene.add(camera);
   
   const clock = new THREE.Clock();
@@ -67,8 +67,8 @@ const camera = new THREE.PerspectiveCamera(
   // new OrbitControls( camera, renderer.domElement );
   window.addEventListener("click", (event) => {
     event.preventDefault();
-    plane.material.color = new THREE.Color(0xffffff * Math.random());
-    plane.material.needsUpdate = true;
+    // plane.material.color = new THREE.Color(0xffffff * Math.random());
+    // plane.material.needsUpdate = true;
     // pointLight.position.x++;
     // pointLight.position.y--;
     // pointLight.position.y++;
@@ -79,8 +79,8 @@ const camera = new THREE.PerspectiveCamera(
 
     const now = Date.now() / 700;
     for(let i = 0; i < count; i++) {
-      const y = (geometry.attributes.position.getY(i)) / 2.5;
-      const x = (geometry.attributes.position.getX(i)) / 2.5;
+      const y = (geometry.attributes.position.getY(i)) / 3;
+      const x = (geometry.attributes.position.getX(i)) / 3;
       const ysin = Math.sin(y + now)
       const xsin = Math.sin(x + now)
       geometry.attributes.position.setZ(i, xsin + ysin)

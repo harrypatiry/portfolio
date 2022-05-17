@@ -21,6 +21,7 @@ html, body {
     padding: .5em;
     font-weight: 100;
     background-color: transparent;
+    color: #444444c9;
 }
   
 .navigation p {
@@ -66,7 +67,7 @@ nav {
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    background-color: #ffffff;
+    background-color: #444444c9;
 }
 
 a, a:visited {
@@ -91,6 +92,7 @@ section {
     place-items: center;
     z-index: 3;
     text-align: center;
+    color: #444444c9;
 }
 
 .title p {
