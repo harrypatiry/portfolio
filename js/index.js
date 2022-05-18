@@ -5,3 +5,22 @@ window.onload = function() {
         nav.classList.toggle('nav-active');
     })
 }
+
+const buttons = document.querySelectorAll("[data-scroll-button]")
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const offset = button.dataset.scrollButton === "next" ? 1 : -1
+    const items = button
+      .closest("[data-scroll]")
+      .querySelector("[data]")
+
+    const activeItem = items.querySelector("[data-active]")
+    let newIndex = [...items.children].indexOf(activeItem) + offset
+    if (newIndex < 0) newIndex = slides.children.length - 1
+    if (newIndex >= items.children.length) newIndex = 0
+
+    items.children[newIndex].dataset.active = true
+    delete activeItem.dataset.active
+  })
+})
