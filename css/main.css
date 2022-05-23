@@ -128,6 +128,7 @@ section#title {
         width: 100%;
     }
     .nav-links {
+      padding: 0;
       position: relative;
       display: flex;
       flex-direction: column;
