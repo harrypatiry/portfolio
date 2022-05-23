@@ -19,7 +19,7 @@ buttons.forEach(button => {
 
     const activeItem = items.querySelector("[data-active]")
     let newIndex = [...items.children].indexOf(activeItem) + offset
-    if (newIndex < 0) newIndex = slides.children.length - 1
+    if (newIndex < 0) newIndex = items.children.length - 1
     if (newIndex >= items.children.length) newIndex = 0
 
     items.children[newIndex].dataset.active = true
