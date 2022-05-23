@@ -60,16 +60,7 @@ const camera = new THREE.PerspectiveCamera(
   const clock = new THREE.Clock();
   
   // new OrbitControls( camera, renderer.domElement );
-  window.addEventListener("click", (event) => {
-    event.preventDefault();
-    // plane.material.color = new THREE.Color(0xffffff * Math.random());
-    // plane.material.needsUpdate = true;
-    // pointLight.position.x++;
-    // pointLight.position.y--;
-    // pointLight.position.y++;
-    // pointLight.position.needsUpdate = true;
-  });
-  
+
   const animate = () => {
 
     const now = Date.now() / 700;
