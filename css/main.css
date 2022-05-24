@@ -306,7 +306,7 @@ section#about {
 }
 
 .py-project p {
-    text-align: start;
+    text-align: left;
     width: 40%;
 }
 
