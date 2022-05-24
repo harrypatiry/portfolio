@@ -307,6 +307,7 @@ section#about {
 
 .py-project p {
     text-align: start;
+    width: 40%;
 }
 
 @media screen and (max-width: 900px) {
@@ -342,6 +343,7 @@ section#about {
     }
     .py-project p {
         text-align: center;
+        width: 100%;
     }
 }
 
@@ -416,6 +418,7 @@ footer {
 }
 
 .copyright {
+    font-size: 14px;
     padding-top: 1em;
     padding-bottom: 1em;
     text-align: center;
