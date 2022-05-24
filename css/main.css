@@ -133,6 +133,7 @@ section#title {
       position: relative;
       display: flex;
       flex-direction: column;
+      height: 92vh;
       max-height: 92vh;
       align-items: center;
       position: absolute;
@@ -304,6 +305,10 @@ section#about {
     display: flex;
 }
 
+.py-project p {
+    text-align: start;
+}
+
 @media screen and (max-width: 900px) {
     .scroll-button.prev {
         left: 1rem;
@@ -334,6 +339,9 @@ section#about {
     }
     .py-project {
         display: block;
+    }
+    .py-project p {
+        text-align: center;
     }
 }
 
@@ -393,7 +401,9 @@ footer {
     display: grid;
 }
 .social {
+    text-align: center;
     padding-right: 1em;
+    padding-left: 1em;
     grid-column: 1;
     width: 100%;
 }
