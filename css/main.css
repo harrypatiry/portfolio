@@ -300,6 +300,11 @@ section#about {
     border: .3em inset #222222;
 }
 
+.me {
+    display: flex;
+    text-align: left;
+}
+
 .py-project {
     padding-top: 3em;
     display: flex;
@@ -345,6 +350,10 @@ section#about {
         text-align: center;
         width: 100%;
     }
+    .me {
+        display: block;
+        text-align: center
+    };
 }
 
 .contact {
