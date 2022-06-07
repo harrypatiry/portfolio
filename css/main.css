@@ -277,8 +277,12 @@ section#about {
 }
 
 .about-container{
-    display: block;
-    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 8rem;
     text-align: center;
 }
 
@@ -287,38 +291,30 @@ section#about {
     padding: 1rem;
 }
 
-#about img {
-    filter: grayscale(1);
-    border: .3em outset #222222;
-    width: 45%;
-    min-width: 400px;
-    align-items: center;
-}
-
 #about img:hover {
     filter: grayscale(0);
     border: .3em inset #222222;
 }
 
 .me {
-    display: flex;
+    flex: 1;
+    display: block;
     text-align: left;
 }
 
 .py-project {
-    padding-top: 3em;
-    display: flex;
+    flex: 1;
+    display: block;
 }
 
 .py-project iframe {
     padding: 0;
-    width: 600px;
-    height: 400px;
+    width: 100%;
+    height: 400px
 }
 
 .py-project p {
     text-align: left;
-    width: 50%;
 }
 
 @media screen and (max-width: 900px) {
@@ -338,16 +334,13 @@ section#about {
         padding: 0;
     }
     .about-container {
+        padding-top: 2rem;
         display: block;
         text-align: center;
     }
     #about h3 {
         text-align: center;
         padding: 0;
-    }
-    #about img {
-        width: 55%;
-        min-width: 100px;
     }
     .py-project {
         display: block;
