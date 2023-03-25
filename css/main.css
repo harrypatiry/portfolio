@@ -28,7 +28,7 @@ html, body {
 .navigation {
     font-weight: 200;
     background-color: transparent;
-    color: #444444c9;
+    color: #f37f12c9;
 }
 
 .navigation p {
@@ -82,7 +82,7 @@ nav {
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    background-color: #444444c9;
+    background-color: #f37f12c9;
 }
 
 a, a:visited {
@@ -112,7 +112,8 @@ section#title {
     z-index: 3;
     text-align: center;
     font-weight: 600;
-    color: #444444c9;
+    color: #f37f12c9;
+    text-shadow: rgb(255, 196, 0) 3px 0 0px;
 }
 
 #title p {
@@ -180,6 +181,7 @@ section#projects {
     letter-spacing: 3px;
     font-weight: 600;
     padding-left: 3rem;
+    text-shadow: rgb(255, 196, 0) 3px 0 0px;
 }
 
 #projects .item p {
@@ -274,6 +276,7 @@ section#about {
     letter-spacing: 3px;
     font-weight: 600;
     padding-left: 3rem;
+    text-shadow: rgb(255, 196, 0) 3px 0 0px;
 }
 
 .about-container{
