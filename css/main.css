@@ -184,85 +184,40 @@ section#projects {
     text-shadow: rgb(255, 196, 0) 3px 0 0px;
 }
 
-#projects .item p {
+#projects p{
     text-align: center;
     padding-left: 5em;
     padding-right: 5em;
     padding-top: 1em;
     padding-bottom: 1em;
 }
-#projects .item a {
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    padding: .5em;
-    border: .1em outset #ffffff;
-}
 
-#projects .item a:hover {
-    color: #7a7a7a;
-    background-color: white;
-}
 
-.scroll {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-}
-.scroll > ul {
-    margin: 0 auto;
-    padding: 0;
-    list-style: none;
-}
-.item {
-    position: absolute;
-    opacity: 0;
-    margin: 0 auto;
-    top: 55%;
-    transform: translateY(-50%);
-    left: 0;
-    right: 0;
+#projects .grid-container ul{
     display: grid;
-    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 3em;
 }
-.item > img {
-    max-width: 55%;
-    min-width: 55%;
-    filter: grayscale(1);
+
+.item-1 {
+    grid-column: 1 / span 1;
+}
+
+.item-2 {
+    grid-column: 2 / span 1;
+}
+
+section#projects .grid-container img {
+    border: 1px solid white;
+    max-width: 40vw;
     border: .3em outset #222222;
 }
-.item > img:hover {
+
+#projects .container img {
+    filter: grayscale(1);
+}
+#projects .container img:hover {
     filter: grayscale(0);
-}
-.item[data-active] {
-    opacity: 1;
-    z-index: 1;
-    transition-delay: 0ms;
-}
-.scroll-button {
-    position: absolute;
-    background: none;
-    border: none;
-    font-size: 4rem;
-    top: 50%;
-    z-index: 3;
-    transform: translateY(-50%);
-    color:rgba(255, 255, 255, 0.514);
-    cursor: pointer;
-    border-radius: .25rem;
-    padding: 0 .5rem;
-}
-.scroll-button:hover,
-.scroll-button:focus {
-    color: white;
-}
-
-.scroll-button.prev {
-    left: 5rem;
-}
-
-.scroll-button.next {
-    right: 5rem;
 }
 
 section#about {
@@ -321,17 +276,23 @@ section#about {
 }
 
 @media screen and (max-width: 900px) {
-    .scroll-button.prev {
-        left: 1rem;
-    }
-    
-    .scroll-button.next {
-        right: 1rem;
-    }
     .item > img {
         max-width: 90%;
         min-width: 90%;
     }
+
+    #projects .grid-container ul{
+        display: flex;
+        flex-direction: column;
+    } 
+
+    section#projects .grid-container img {
+        border: 1px solid white;
+        max-width: 90vw;
+        min-width: 45%;
+        border: .3em outset #222222;
+    }
+
     #projects h3 {
         text-align: center;
         padding: 0;
