@@ -173,7 +173,7 @@ section#title {
 }
 
 section#projects {
-    height: 100%;
+    min-height: 100vh;
 }
 
 #projects h3 {
@@ -222,7 +222,7 @@ section#projects .grid-container img {
 
 section#about {
     width: 100%;
-    max-height: 100vh;
+    min-height: 100vh;
     padding-top: 5em;
 }
 
@@ -276,10 +276,14 @@ section#about {
 }
 
 @media screen and (max-width: 900px) {
-    .item > img {
+
+    #section.projects {
+        padding-bottom: 10%;
+    }
+    /* .item > img {
         max-width: 90%;
         min-width: 90%;
-    }
+    } */
 
     #projects .grid-container ul{
         display: flex;
@@ -288,8 +292,8 @@ section#about {
 
     section#projects .grid-container img {
         border: 1px solid white;
-        max-width: 90vw;
-        min-width: 45%;
+        /* max-width: 90vw;
+        min-width: 40%; */
         border: .3em outset #222222;
     }
 
